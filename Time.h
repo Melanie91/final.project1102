@@ -1,5 +1,5 @@
 #ifndef TIME_H
-#define TMIE_H
+#define TIME_H
 
 #include <iostream>
 
@@ -21,7 +21,7 @@ public:
 	void setHour2(int);
 	void setMintue2(int);
 
-	int countTime(); //計算總共停多久
+	void countTime(); //計算總共停多久
 	int countTimeMoney(); //便利算錢的時間
 
 private:
