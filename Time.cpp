@@ -65,7 +65,7 @@ void Time::setMintue2(int newMinute2)
 
 // count time
 
-int Time::countTime() //計算總共停多久
+void Time::countTime() //計算總共停多久
 {
 	cout << "總共的停車時間:" << (hour2 * 60 + minute2 - hour1 * 60 - minute1) / 60 << " 小時 "
 		<< (hour2 * 60 + minute2 - hour1 * 60 - minute1) % 60 << " 分鐘 " << endl;
