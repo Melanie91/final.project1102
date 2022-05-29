@@ -21,7 +21,6 @@ public:
 	void countMoney(int); //算停車費
 
 private:
-	//int money;
 	Time totalminute;
 };
 
