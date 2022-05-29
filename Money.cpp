@@ -1,62 +1,46 @@
+//Money.cpp
+
 #include "Money.h"
-//#include "Time.h"
+#include "Time.h"
+
 #include <iostream>
 
 using namespace std;
 
-Money::Money()
-{
-	setTotalMinute(0);
-	setMoney(0);
-}
+Money::Money(){ }
 
-Money::Money(int newTotalMinute)
+Money::Money(Time newTotalMinute)
 {
 	setTotalMinute(newTotalMinute);
 }
 
-
-int Money::getTotalMinute()
+Time Money::getTotalMinute()
 {
 	return totalminute;
 }
 
-int Money::getMoney()
-{
-	return money;
-}
-
-void Money::setTotalMinute(int newTotalMinute)
+void Money::setTotalMinute(Time newTotalMinute)
 {
 	totalminute = newTotalMinute;
 }
 
-void Money::setMoney(int newMoney)  //time
+
+void Money::countMoney(int totalminute)  //time
 {
-	money = newMoney;
-}
-
-
-void Money::countMoney()  //time
-{
-	int temp = totalminute / 30; //以半小時計算(30分鐘)取整數
-
-	if (temp == 0)
+	if (totalminute == 0)
 	{
-		setMoney(0);   //money = 0;
+		cout << "Total parking fee : NT 0 dollar." << endl;
 	}
-	else if (temp > 0 && temp < 4)  //2小時為4個半小時
+	else if (totalminute > 0 && totalminute < 4)  //2小時為4個半小時
 	{
-		setMoney(temp * 20);  //money = temp*20;
+		cout << "Total parking fee : NT " << totalminute * 20 << " dollars." << endl;
 	}
-	else if (temp >= 4 && temp < 48) //24小時為48個半小時
+	else if (totalminute >= 4 && totalminute < 48) //24小時為48個半小時
 	{
-		setMoney(temp * 35);  //money = temp*35;
+		cout << "Total parking fee : NT " << totalminute * 35 << " dollars." << endl;
 	}
-	else if (temp >= 48)
+	else if (totalminute >= 48)
 	{
-		setMoney(1500);   //money = 1500;
+		cout << "Total parking fee : NT 1500 dollars." << endl;
 	}
-
-	cout << "總共需付款:" << getMoney() << "元" << endl;
 }
