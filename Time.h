@@ -1,3 +1,5 @@
+//Time.h
+
 #ifndef TIME_H
 #define TIME_H
 
@@ -21,8 +23,9 @@ public:
 	void setHour2(int);
 	void setMintue2(int);
 
-	void countTime(); //計算總共停多久
-	int countTimeMoney(); //便利算錢的時間
+	void countTime(int, int, int, int);
+
+	int countTimeMoney(int, int, int, int); //便利算錢的時間
 
 private:
 	int hour1, hour2;
