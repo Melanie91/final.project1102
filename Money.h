@@ -1,7 +1,10 @@
+//Money.h
+
 #ifndef MONEY_H
 #define MONEY_H
 
 #include <iostream>
+#include "Time.h"
 
 using namespace std;
 
@@ -9,19 +12,17 @@ class Money
 {
 public:
 	Money();
-	Money(int);
+	Money(Time);
 	//把Time.cpp裡countTimeMoney()算出來的值傳入
 
-	int getTotalMinute();
-	int getMoney();
-	void setTotalMinute(int);
-	void setMoney(int);
+	Time getTotalMinute();
 
-	void countMoney(); //算停車費
+	void setTotalMinute(Time);
+	void countMoney(int); //算停車費
 
 private:
-	int totalminute;
-	int money;
+	//int money;
+	Time totalminute;
 };
 
 #endif
