@@ -1,3 +1,5 @@
+//Time.cpp
+
 #include "Time.h"
 #include <iostream>
 
@@ -65,14 +67,16 @@ void Time::setMintue2(int newMinute2)
 
 // count time
 
-void Time::countTime() //計算總共停多久
+void Time::countTime(int hour1, int hour2, int minute1, int minute2) //計算總共停多久
 {
-	cout << "總共的停車時間:" << (hour2 * 60 + minute2 - hour1 * 60 - minute1) / 60 << " 小時 "
-		<< (hour2 * 60 + minute2 - hour1 * 60 - minute1) % 60 << " 分鐘 " << endl;
+	cout << "Total parking time: " << (hour2 * 60 + minute2 - hour1 * 60 - minute1) / 60 << " Hours "
+		<< (hour2 * 60 + minute2 - hour1 * 60 - minute1) % 60 << " Minutes. " << endl;
 }
 
-int Time::countTimeMoney() //便利算錢的時間
-{
 
-	return hour2 * 60 + minute2 - hour1 * 60 - minute1;
+int Time::countTimeMoney(int hour1, int hour2, int minute1, int minute2) //便利算錢的時間
+{
+	int total = 0;
+	total = (hour2 * 60 + minute2 - hour1 * 60 - minute1) / 30;
+	return total;
 }
