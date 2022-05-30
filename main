@@ -1,5 +1,5 @@
 //main.cpp
-//2022.05.29 newest
+//2022.05.30 newest
 
 #include <iostream>
 #include <string>
@@ -10,22 +10,25 @@
 using namespace std;
 
 int main() {
+
+	//input time, number
+
 	string number;
 	int h1, h2, m1, m2;
 
 	cout << "Please enter your car number: (EX: ABC-1234)" << endl;
 	cin >> number;
-
 	cout << endl;
 
 	cout << "Please enter your starting time: (Hours:00~23 / Minutes:00~59)" << endl;
 	cin >> h1 >> m1;
-
 	cout << endl;
 
 	cout << "Please enter your leaving time: (Hours:00~23 / Minutes:00~59)" << endl;
 	cin >> h2 >> m2;
+	cout << endl;
 
+	//class Time
 	Time t1;
 	Time t2;
 	Time t;
@@ -36,7 +39,7 @@ int main() {
 	t2.setHour2(h2);
 	t2.setMintue2(m2);
 
-	cout << endl;
+	//output number, total fee and time
 	cout << "------------------------------------------" << endl;
 	cout << endl;
 	cout << "Your car number : " << number << endl;
@@ -44,7 +47,9 @@ int main() {
 	t.countTime(h1,h2,m1,m2);
 	t.countTimeMoney(h1, h2, m1, m2);
 	
+	//class Money
 	Money c1;
 	c1.countMoney(t.countTimeMoney(h1, h2, m1, m2));
 
+	return 0;
 }
