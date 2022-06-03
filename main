@@ -31,22 +31,24 @@ int main() {
  cout << endl;
 
  //class Time
- Time t1; //宣告類別為Time的資料，並給定t1變數
- Time t2; //宣告類別為Time的資料，並給定t2變數
- Time t;  //宣告類別為Time的資料，並給定t變數
 
- t1.setHour1(h1);  
- t1.setMintue1(m1);
+ Time t1; //宣告類別為Time的資料
+ Time t2; //宣告類別為Time的資料
+ Time t;  //宣告類別為Time的資料
+
+ t1.setHour1(h1);
+ t1.setMintue1(m1); 
 
  t2.setHour2(h2);
  t2.setMintue2(m2);
 
  //output number, total fee and time
+
  cout << "------------------------------------------" << endl;
  cout << endl;
  cout << "Your car number : " << number << endl;
 
- t.countTime(h1, h2 ,m1, m2); //計算總共停多久
+ t.countTime(h1, h2 ,m1, m2); //計算總共停多久 
  t.countTimeMoney(h1, h2, m1, m2); //便利算錢的時間
  
  //class Money
