@@ -1,12 +1,12 @@
 //Time.cpp
-//2022.05.29 newest
+//2022.06.03 newest
 
 #include "Time.h"
 #include <iostream>
 
 using namespace std;
 
-Time::Time()
+Time::Time() // Time的建構式
 {
 	hour1 = 0;
 	minute1 = 0;
