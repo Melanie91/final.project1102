@@ -1,5 +1,5 @@
 //Time.h
-//2022.05.29 newest
+//2022.06.03 newest
 
 #ifndef TIME_H
 #define TIME_H
@@ -11,7 +11,7 @@ using namespace std;
 class Time
 {
 public:
-	Time();
+	Time(); // Time的建構式
 	Time(int, int, int, int);
 	
 	int getHour1();
