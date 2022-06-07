@@ -45,8 +45,8 @@ int main() {
 	
 	//class Money
 
-	Money c1; //宣告類別為Money的資料，並給定c1變數
-	c1.countMoney(t.countTimeMoney(h1, h2, m1, m2));
+	Money m; //宣告類別為Money的資料，並給定c1變數
+	m.countMoney(t.countTimeMoney(h1, h2, m1, m2));
 
 	return 0;
 }
